@@ -232,7 +232,7 @@ for_statement:
     FOR variable ASSIGN expression TO expression DO statement
     {tfs << endl << "#041 for-statement -> for variable := expression to expression do statement";}
 for_statement:
-    FOR variable ASSIGN expression DOWNTO expression
+    FOR variable ASSIGN expression DOWNTO expression DO statement
     {tfs << endl << "#042 for-statement -> for variable := expression downto expression do statement";}
 variable:
     ID
@@ -325,7 +325,7 @@ factor:
     ID
     {tfs << endl << "#072 factor -> ID";}
 factor:
-    ID LBRACKET expression_list RBRACKET
+    ID LBRACKET expression RBRACKET
     {tfs << endl << "#073 factor -> ID [ expression-list ]";}
 factor:
     ID LPAREN expression_list RPAREN

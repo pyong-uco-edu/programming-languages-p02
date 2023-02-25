@@ -4,4 +4,3 @@ rm *.o
 rm p02
 rm y.output
 rm y.tab.h
-rm p02tkn.h

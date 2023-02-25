@@ -63,7 +63,7 @@ string tokens[] = {
     "LEQ", "GRT", "GEQ", "PLUS", "MINUS", "STAR", "SLASH", "ASSIGN", 
     "LPAREN", "RPAREN", "LBRACKET", "RBRACKET", "COLON", "SEMICOLON", 
     "COMMA", "PERIOD", "RANGE", "ID", "INTLIT", "CHRLIT", "REALIT", 
-    "APOSTROPHE", "QUOTE", "ASPERAND", "EPSILON", "READ", "WRITE",
+    "APOSTROPHE", "QUOTE", "ASPERAND", "EPSILON", "READ",
     "ERROR"};
 
 //--------------------------------------------------------------------
@@ -126,8 +126,8 @@ struct BadCharacterException{
 [_a-zA-Z][_a-zA-Z0-9]* return TokenMgr(ID);
 [{][^}]*[]}]    { commentLength = ((string)yytext).length();col = col + commentLength;}
 [0-9]+ return TokenMgr(INTLIT);
-['][.]+['] return TokenMgr(CHRLIT);
-[0-9]+[\.[0-9]+]?[E[+-]?[0-9]+]? return TokenMgr(REALIT);
+'[^']+' return TokenMgr(CHRLIT);
+[0-9]+\.[0-9]+([Ee][+-]?[0-9]+)	return TokenMgr(REALIT);
 ":=" return TokenMgr(ASSIGN);
 ";" return TokenMgr(SEMICOLON);
 "," return TokenMgr(COMMA);
@@ -148,7 +148,6 @@ struct BadCharacterException{
 ":" return TokenMgr(COLON);
 "." return TokenMgr(PERIOD);
 ".." return TokenMgr(RANGE);
-"\'" return TokenMgr(APOSTROPHE);
 "\"" return TokenMgr(QUOTE);
 "@" return  TokenMgr(ASPERAND);
 "" return TokenMgr(EPSILON);
@@ -222,7 +221,6 @@ void PopulateRWMap(void)
 {   RW["begin"]=BEGAN;
     RW["end" ]=END;
     RW["read" ]=READ;
-    RW["write"]=WRITE;
     RW["and"] = AND;
     RW["array"] = ARRAY;
     RW["begin"] = BEGAN;
@@ -314,7 +312,6 @@ void PopulateTokenNameMap(void)
       TokenName[ASPERAND ]= "ASPERAND";
       TokenName[EPSILON ]= "EPSILON";
       TokenName[READ ]= "READ";
-      TokenName[WRITE]= "WRITE";
       TokenName[ERROR ]= "ERROR";
 }
 //--------------------------------------------------------------------
