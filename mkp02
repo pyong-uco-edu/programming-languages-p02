@@ -3,5 +3,5 @@ rm p02par.cpp
 rm *.o
 rm p02
 rm y.tab.h
-rm p02tkn.h
+rm *.trc
 make -f p02make

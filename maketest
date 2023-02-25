@@ -1,0 +1,8 @@
+# run make -f maketest
+test:
+	bash mkp02
+
+	for name in *.pas; do\
+		echo --- Testing $${name} ---;\
+		./p02 $${name};\
+	done
