@@ -11,7 +11,7 @@
 // Student 2 CRN:	        21502, Spring 2023
 // Course:		            CMSC 4023 - Programming Languages
 // Project:	 	            p02
-// Due:		 	            Febuary 27, 2023
+// Due:		 	            February 27, 2023
 // Project Account Number:	tt048
 //--------------------------------------------------------------
 //--------------------------------------------------------------------
@@ -63,7 +63,7 @@ string tokens[] = {
     "LEQ", "GRT", "GEQ", "PLUS", "MINUS", "STAR", "SLASH", "ASSIGN", 
     "LPAREN", "RPAREN", "LBRACKET", "RBRACKET", "COLON", "SEMICOLON", 
     "COMMA", "PERIOD", "RANGE", "ID", "INTLIT", "CHRLIT", "REALIT", 
-    "APOSTROPHE", "QUOTE", "ASPERAND", "EPSILON", "READ",
+    "APOSTROPHE", "QUOTE", "ASPERAND", "EPSILON",
     "ERROR"};
 
 //--------------------------------------------------------------------
@@ -220,7 +220,6 @@ void TokenTrace(int tkn)
 void PopulateRWMap(void)
 {   RW["begin"]=BEGAN;
     RW["end" ]=END;
-    RW["read" ]=READ;
     RW["and"] = AND;
     RW["array"] = ARRAY;
     RW["begin"] = BEGAN;
@@ -246,20 +245,7 @@ void PopulateRWMap(void)
 }
 void PopulateTokenNameMap(void)
 { 
-// TokenName[BEGAN ]="BEGAN";
-//  TokenName[END ]="END";
-//  TokenName[READ ]="READ";
-//  TokenName[WRITE ]="WRITE";
-//  TokenName[INTLIT ]="INTLIT";
-//  TokenName[ID ]="ID";
-//  TokenName[ASSIGN ]="ASSIGN";
-//  TokenName[SEMICOLON ]="SEMICOLON";
-//  TokenName[COMMA ]="COMMA";
-//  TokenName[LPAREN ]="LPAREN";
-//  TokenName[RPAREN ]="RPAREN";
-//  TokenName[PLUS ]="PLUS";
-//  TokenName[MINUS ]="MINUS";
-//  TokenName[ERROR ]="ERROR";
+
       TokenName[AND ]= "AND";
       TokenName[ARRAY ]= "ARRAY";
       TokenName[BEGAN ]= "BEGAN";
@@ -311,7 +297,6 @@ void PopulateTokenNameMap(void)
       TokenName[QUOTE ]= "QUOTE";
       TokenName[ASPERAND ]= "ASPERAND";
       TokenName[EPSILON ]= "EPSILON";
-      TokenName[READ ]= "READ";
       TokenName[ERROR ]= "ERROR";
 }
 //--------------------------------------------------------------------

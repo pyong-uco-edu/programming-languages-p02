@@ -1,8 +1,4 @@
-#ifndef p02tkn_h
-#define p02tkn_h 1
-//-------------------------------------------------------------------------
-// File p02tkn_prolog.h must be prefixed onto p02tkn.h
-//-------------------------------------------------------------------------/* A Bison parser, made by GNU Bison 2.3.  */
+/* A Bison parser, made by GNU Bison 2.3.  */
 
 /* Skeleton interface for Bison's Yacc-like parsers in C
 
@@ -170,7 +166,3 @@ typedef union YYSTYPE
 
 extern YYSTYPE yylval;
 
-//------------------------------------------------------------------------
-// File p02tkn_epilog.h must be appended to file p02tkn.h
-//------------------------------------------------------------------------
-#endif

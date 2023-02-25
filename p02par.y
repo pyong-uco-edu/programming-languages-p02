@@ -11,7 +11,7 @@
 // Student 2 CRN:	        21502, Spring 2023
 // Course:		            CMSC 4023 - Programming Languages
 // Project:	 	            p02
-// Due:		 	            Febuary 27, 2023
+// Due:		 	            February 27, 2023
 // Project Account Number:	tt048
 //--------------------------------------------------------------
 //---------------------------------------------------------------------
@@ -104,8 +104,6 @@ extern int col;
 %token <token> QUOTE
 %token <token> ASPERAND
 %token <token> EPSILON
-%token <token> READ
-%token <token> WRITE
 %token <token> ERROR
 %%
 program:
